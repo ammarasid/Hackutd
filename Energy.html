@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Energy Usage Section</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .energy-usage-container {
+            background-color: #A6FFFC;
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            align-items: center;
+            padding: 33px 20px;
+            min-height: 100vh;
+        }
+        .energy-usage-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .energy-usage-title {
+            color: #000;
+            font-size: 40px;
+            font-weight: 700;
+        }
+        .energy-usage-content {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+        }
+        .energy-usage-image {
+            width: 100%;
+            height: auto;
+        }
+        .image-button {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 2px solid #000;
+            cursor: pointer;
+            padding: 0;
+        }
+        .button-1 {
+            top: 20%;
+            left: 30%;
+        }
+        .button-2 {
+            top: 40%;
+            left: 60%;
+        }
+        .button-3 {
+            top: 70%;
+            left: 45%;
+        }
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #76F89F;
+            padding: 20px;
+            border: 1px solid #000;
+            z-index: 1000;
+            border-radius: 10px;
+            max-width: 80%;
+        }
+        .popup h2 {
+            margin-top: 0;
+        }
+        .popup button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #fff;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .energy-usage-title {
+                font-size: 30px;
+            }
+            .energy-usage-content {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="energy-usage-container">
+        <header class="energy-usage-header">
+            <h1 class="energy-usage-title">Check Energy Usage of the Building</h1>
+        </header>
+        <div class="energy-usage-content">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/761cdfc4-6d77-43c6-9142-825ecbcd236a?placeholderIfAbsent=true&apiKey=fe24031537ff43938af39a51dab309fc" alt="Energy usage visualization" class="energy-usage-image">
+            <button class="image-button button-1" aria-label="Show Bulb 1 information" onclick="showPopup('popup-1')"></button>
+            <button class="image-button button-2" aria-label="Show Bulb 2 information" onclick="showPopup('popup-2')"></button>
+            <button class="image-button button-3" aria-label="Show Bulb 3 information" onclick="showPopup('popup-3')"></button>
+        </div>
+    </section>
+
+    <div id="popup-1" class="popup" role="dialog" aria-labelledby="popup-1-title">
+        <h2 id="popup-1-title">Bulb 1 Information</h2>
+        <div id="popup-1-content">
+            Status: Turned Off<br>
+            Watts: 55 W<br>
+            kWh: 55 * # of hours<br>
+            Type: Incandescent<br>
+            Risk: <span style="color: #EC1F1F;">High</span><br>
+            Suggestions: Replace with LED light bulb, reduce energy consumption
+        </div>
+        <button onclick="closePopup('popup-1')">Close</button>
+    </div>
+
+    <div id="popup-2" class="popup" role="dialog" aria-labelledby="popup-2-title">
+        <h2 id="popup-2-title">Bulb 2 Information</h2>
+        <div id="popup-2-content">
+            Status: Turned Off<br>
+            Watts: 23 W<br>
+            kWh: 23 * # of hours<br>
+            Type: Fluorescent<br>
+            Risk: Moderate<br>
+            Suggestions: Replace with LED light bulb, reduce energy consumption
+        </div>
+        <button onclick="closePopup('popup-2')">Close</button>
+    </div>
+
+    <div id="popup-3" class="popup" role="dialog" aria-labelledby="popup-3-title">
+        <h2 id="popup-3-title">Bulb 3 Information</h2>
+        <div id="popup-3-content">
+            Status: <span style="color: #EC1F1F;">Turned On</span><br>
+            Watts: 13 W<br>
+            kWh: 13 * # of hours<br>
+            Type: LED<br>
+            Risk: Low<br>
+            Suggestions: Reduce energy consumption
+        </div>
+        <button onclick="closePopup('popup-3')">Close</button>
+    </div>
+
+    <script>
+        function showPopup(popupId) {
+            document.getElementById(popupId).style.display = 'block';
+        }
+
+        function closePopup(popupId) {
+            document.getElementById(popupId).style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability Solutions</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .sustainability-frame {
+            background-color: #afd8da;
+            display: flex;
+            padding: 38px 0;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .header-container {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .divider {
+            min-height: 1px;
+            width: 100%;
+            border: 1px solid #000;
+        }
+        .nav-menu {
+            display: flex;
+            width: 100%;
+            max-width: 1117px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            color: #000;
+            text-align: center;
+            margin: 29px 0;
+            font: 400 24px Judson, sans-serif;
+        }
+        .nav-item {
+            z-index: 10;
+            text-decoration: none;
+            color: inherit;
+        }
+        .nav-item-login {
+            margin-left: auto;
+        }
+        .nav-center {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        .nav-center .nav-item {
+            margin: 0 20px;
+        }
+        .main-content {
+            display: flex;
+            margin-top: 50px;
+            width: 716px;
+            max-width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main-title {
+            color: #000;
+            text-align: center;
+            font: 400 96px Judson, sans-serif;
+        }
+        .progress-widget {
+            background-color: rgba(172, 236, 234, 0.46);
+            z-index: 10;
+            display: flex;
+            margin-top: 20px;
+            width: 267px;
+            max-width: 100%;
+            flex-direction: column;
+            padding: 32px 13px 5px;
+        }
+        .progress-title {
+            color: #000;
+            text-align: center;
+            font: 400 15px Julius Sans One, sans-serif;
+        }
+        .progress-text {
+            color: #000;
+            align-self: start;
+            margin-top: 8px;
+            font: 400 14px Judson, sans-serif;
+        }
+        .progress-bar {
+            border-radius: 50px;
+            background-color: #2adcd6;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-top: 10px;
+        }
+        .progress-made {
+            border-radius: 50px;
+            background-color: #000;
+            width: 124px;
+            height: 7px;
+        }
+        .features-section {
+            display: flex;
+            width: 100%;
+            max-width: 1011px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+        }
+        .features-title {
+            color: #000;
+            text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            font: 400 32px Judson, sans-serif;
+            margin-bottom: 46px;
+        }
+        .features-container {
+            width: 100%;
+            max-width: 922px;
+        }
+        .features-grid {
+            display: flex;
+            justify-content: space-between;
+        }
+        .feature-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 25%;
+            margin: 0 10px;
+        }
+        .feature-card {
+            border-radius: 30px;
+            background-color: #5db2d9;
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            color: #000;
+            text-align: center;
+            width: 100%;
+            padding: 74px 38px 48px;
+            font: 400 24px Judson, sans-serif;
+        }
+        .feature-icon {
+            aspect-ratio: 0.8;
+            object-fit: contain;
+            object-position: center;
+            width: 112px;
+            background-color: #a6fffc;
+            border-radius: 50%;
+            align-self: center;
+            margin-top: 9px;
+            max-width: 100%;
+        }
+        .nav-button {
+            background-color: #5db2d9;
+            border: none;
+            border-radius: 20px;
+            color: #000;
+            cursor: pointer;
+            font: 400 24px Judson, sans-serif;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .nav-button:hover {
+            background-color: #4a8fb0;
+        }
+        .nav-button:focus {
+            outline: 2px solid #000;
+            outline-offset: 2px;
+        }
+        @media (max-width: 991px) {
+            .nav-menu {
+                flex-direction: column;
+            }
+            .main-title {
+                font-size: 40px;
+            }
+            .features-grid {
+                flex-direction: column;
+                align-items: center;
+                gap: 40px;
+            }
+            .feature-column {
+                width: 80%;
+            }
+            .feature-card {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="sustainability-frame">
+        <header class="header-container">
+            <hr class="divider">
+        </header>
+        <nav class="nav-menu">
+            <a href="#" class="nav-item">Nexus</a>
+            <div class="nav-center">
+                <a href="Welcome.html">
+                <button class="nav-button" aria-label="Home">Home</button>
+            </a>
+                <a href="layer4.html">
+                <button class="nav-button" aria-label="Water">Water</button>
+            </a>
+                <a href="Energy.html">
+                <button class="nav-button" aria-label="Energy">Energy</button>
+            </a>
+            </div>
+            <a href="#" class="nav-item nav-item-login">Log In</a>
+        </nav>
+        <main class="main-content">
+            <h1 class="main-title">Nexus</h1>
+            <div class="progress-widget">
+                <h2 class="progress-title">Goal Progress</h2>
+                <p class="progress-text">24 gallons saved</p>
+                <div class="progress-bar">
+                    <div class="progress-made" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+            </div>
+        </main>
+        <section class="features-section">
+            <h2 class="features-title">Transform the future with Smart Sustainability Solutions</h2>
+            <div class="features-container">
+                <div class="features-grid">
+                    <article class="feature-column">
+                        <div class="feature-card">
+                            <h3>Track Water Usage</h3>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/84e0030d-6051-45dc-878c-836a5c760b93?placeholderIfAbsent=true&apiKey=fe24031537ff43938af39a51dab309fc" alt="Water usage tracking icon" class="feature-icon">
+                        </div>
+                    </article>
+                    <article class="feature-column">
+                        <div class="feature-card">
+                            <h3>Track Energy Usage</h3>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e30b0244-5297-4fc8-a933-fad22be71162?placeholderIfAbsent=true&apiKey=fe24031537ff43938af39a51dab309fc" alt="Energy usage tracking icon" class="feature-icon">
+                        </div>
+                    </article>
+                    <article class="feature-column">
+                        <div class="feature-card">
+                            <h3>Track Sustainable Goals Progress</h3>
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/579132b00bbede4732a808b043fc0a9a7081b092efb2062f7a34c9f4c673061b?placeholderIfAbsent=true&apiKey=fe24031537ff43938af39a51dab309fc" alt="Sustainable goals progress tracking icon" class="feature-icon">
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
