@@ -14,6 +14,28 @@
     box-sizing: border-box;
   }
   
+.sign-up-button
+{
+    position: relative;
+    width: 307px;
+    height: 58px;
+    margin: 150px 0 0 486px;
+    
+    background: #5cc1b8;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    font-family: Roboto, var(--default-font-family);
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+  
   input,
   select,
   textarea,
@@ -178,7 +200,7 @@
     white-space: nowrap;
     z-index: 11;
   }
-  
+
   .veolia
   {
       position: relative;
