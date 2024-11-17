@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Usage Section</title>
+    <style>
+        .water-usage-screen {
+            background: var(--blue, #1464af);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        .energy-title {
+            color: #000;
+            text-align: center;
+            align-self: flex-end;
+            margin-right: 100px;
+            font: 400 18px Judson, sans-serif;
+        }
+        .content-wrapper {
+            display: flex;
+            margin-top: 4px;
+            width: 100%;
+            flex-direction: column;
+            padding: 0 10px 0 30px;
+        }
+        .water-usage-title {
+            color: #000;
+            text-align: center;
+            align-self: flex-start;
+            font: 400 32px Inter, sans-serif;
+            border: 1px solid #000;
+            padding: 5px 10px;
+        }
+        .usage-container {
+            margin-top: 30px;
+        }
+        .usage-content {
+            gap: 15px;
+            display: flex;
+        }
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 35%;
+            margin-left: 0;
+        }
+        .tap-info {
+            display: flex;
+            flex-direction: column;
+            font-family: Inter, sans-serif;
+            color: #0a0909;
+            font-weight: 400;
+            text-align: center;
+        }
+        .tap-main {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-height: 70px;
+            width: 100%;
+            font-size: 24px;
+            white-space: nowrap;
+            padding: 20px 40px;
+        }
+        .tap-image {
+            position: absolute;
+            inset: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        .tap-buttons {
+            display: flex;
+            flex-direction: column;
+            align-self: center;
+            margin-top: 20px;
+            width: 250px;
+            max-width: 100%;
+        }
+        .tap-button {
+            background-color: #2d2dc9;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px 0;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .tap-button:hover {
+            background-color: #1f1f9e;
+        }
+        .tap-button:focus {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            line-height: normal;
+            width: 65%;
+            margin-left: 15px;
+        }
+        .tap-diagram {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            min-height: 350px;
+            margin-top: 8px;
+            width: 100%;
+            align-items: center;
+            color: #2d2dc9;
+            text-align: center;
+            padding: 60px 40px 240px;
+            font: 400 14px Inter, sans-serif;
+        }
+        .tap-positions {
+            position: relative;
+            display: flex;
+            width: 220px;
+            max-width: 100%;
+            gap: 15px;
+            justify-content: space-between;
+        }
+        .tap-two {
+            margin: auto 0;
+        }
+        .tap-one-three {
+            display: flex;
+            flex-direction: column;
+        }
+        .tap-one {
+            align-self: flex-start;
+        }
+        .tap-three {
+            align-self: flex-end;
+            margin-top: 8px;
+        }
+        @media (max-width: 991px) {
+            .energy-title {
+                margin-right: 8px;
+            }
+            .content-wrapper {
+                max-width: 100%;
+                padding-left: 15px;
+            }
+            .water-usage-title {
+                max-width: 100%;
+                font-size: 28px;
+            }
+            .usage-container {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+            .usage-content {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+            .left-column,
+            .right-column {
+                width: 100%;
+            }
+            .tap-info {
+                max-width: 100%;
+                margin-top: 15px;
+            }
+            .tap-main {
+                max-width: 100%;
+                white-space: initial;
+                padding: 0 15px;
+            }
+            .tap-buttons {
+                margin-top: 20px;
+            }
+            .tap-diagram {
+                max-width: 100%;
+                margin-top: 20px;
+                padding: 50px 15px;
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="water-usage-screen">
+        <h1 class="energy-title">Energy</h1>
+        <div class="content-wrapper">
+            <h2 class="water-usage-title">Check Water Usage of the Building</h2>
+            <div class="usage-container">
+                <div class="usage-content">
+                    <div class="left-column">
+                        <div class="tap-info">
+                            <div class="tap-main">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/e370a9a7e27af6f09aa69e4c09a933cd15a862908def3eda4759e389f64fc8d7?placeholderIfAbsent=true&apiKey=dde2e0dc494a44efbb7d6e5bedafc7e4" alt="Tap illustration" class="tap-image">
+                                <span>Tap</span>
+                            </div>
+                            <div class="tap-buttons">
+                                <a href="layer1.html">
+                                <button class="tap-button">Tap One</button>
+                            </a>
+                            <a href="layer2.html">
+                                <button class="tap-button">Tap Two</button>
+                            </a>
+                            <a href="layer3.html">
+                                <button class="tap-button">Tap Three</button>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-column">
+                        <div class="tap-diagram">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/44f9ded4c6c835aade2440d59866a09cc6abe775335f5deeab17ad1230966130?placeholderIfAbsent=true&apiKey=dde2e0dc494a44efbb7d6e5bedafc7e4" alt="Tap diagram" class="tap-image">
+                            <div class="tap-positions">
+                                <div class="tap-two">Tap<br>Two</div>
+                                <div class="tap-one-three">
+                                    <div class="tap-one">Tap One</div>
+                                    <div class="tap-three">Tap<br>Three</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

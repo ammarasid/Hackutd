@@ -1,0 +1,215 @@
+<style>
+    .water-usage-tap-two {
+      background: radial-gradient(50% 50% at 50% 50%, #a6fffc 0%, #fff 100%);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 61px 46px;
+    }
+    
+    @media (max-width: 991px) {
+      .water-usage-tap-two {
+        padding: 0 20px;
+      }
+    }
+    
+    .water-usage-title {
+      color: #000;
+      text-align: center;
+      align-self: flex-start;
+      margin-left: 50px;
+      font: 400 48px Inter, sans-serif;
+      border: 1px solid #000;
+    }
+    
+    @media (max-width: 991px) {
+      .water-usage-title {
+        max-width: 100%;
+        font-size: 40px;
+      }
+    }
+    
+    .status-container {
+      display: flex;
+      margin-top: 102px;
+      align-items: flex-start;
+      gap: 20px;
+      color: #000;
+      text-align: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font: 400 48px Inter, sans-serif;
+    }
+    
+    @media (max-width: 991px) {
+      .status-container {
+        margin-top: 40px;
+        font-size: 40px;
+      }
+    }
+    
+    .status-item {
+      background-color: #d9d9d9;
+      padding: 15px 23px;
+      flex: 1;
+      min-width: 200px;
+    }
+    
+    @media (max-width: 991px) {
+      .status-item {
+        font-size: 40px;
+        padding: 0 20px;
+      }
+    }
+    
+    .info-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1067px;
+      margin: 72px auto 0;
+    }
+    
+    @media (max-width: 991px) {
+      .info-container {
+        flex-direction: column;
+        max-width: 100%;
+        margin: 40px 10px 0 0;
+      }
+    }
+    
+    .info-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 29%;
+    }
+    
+    @media (max-width: 991px) {
+      .info-column {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+    
+    .tap-status {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #000;
+      text-align: center;
+      font: 400 30px Inter, sans-serif;
+    }
+    
+    .status-indicator {
+      background-color: #f82626;
+      border-radius: 50%;
+      width: 117px;
+      height: 117px;
+      margin-bottom: 32px;
+    }
+    
+    .pressure-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #000;
+      text-align: center;
+      font: 400 30px Inter, sans-serif;
+    }
+    
+    .pressure-value {
+      margin-bottom: 20px;
+    }
+    
+    .pressure-bar {
+      width: 100%;
+      height: 38px;
+      margin-top: 16px;
+    }
+    
+    .pressure-bar-green {
+      background-color: #25ee21;
+    }
+    
+    .pressure-bar-yellow {
+      background-color: #ffe32a;
+    }
+    
+    .pressure-bar-orange {
+      background-color: #ee7546;
+    }
+    
+    .pressure-bar-red {
+      background-color: #ef3535;
+    }
+    
+    .info-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #000;
+      text-align: center;
+      font: 400 30px Inter, sans-serif;
+    }
+    
+    .info-text {
+      margin-bottom: 20px;
+    }
+    
+    .info-image {
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+    
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    </style>
+    
+    <section class="water-usage-tap-two">
+      <h2 class="water-usage-title">Check Water Usage of Tap Two</h2>
+      <div class="status-container">
+        <div class="status-item">Activity Status</div>
+        <div class="status-item">Pressure Sensor</div>
+        <div class="status-item">Information</div>
+      </div>
+      <div class="info-container">
+        <div class="info-column">
+          <div class="tap-status">
+            <div class="status-indicator" role="img" aria-label="Red circle indicating tap is closed"></div>
+            <p>Tap: Closed</p>
+          </div>
+        </div>
+        <div class="info-column">
+          <div class="pressure-info">
+            <p class="pressure-value">1.5 Bar</p>
+            <div class="pressure-bar pressure-bar-green" role="img" aria-label="Green pressure bar"></div>
+            <div class="pressure-bar pressure-bar-yellow" role="img" aria-label="Yellow pressure bar"></div>
+            <div class="pressure-bar pressure-bar-orange" role="img" aria-label="Orange pressure bar"></div>
+            <div class="pressure-bar pressure-bar-red" role="img" aria-label="Red pressure bar"></div>
+          </div>
+        </div>
+        <div class="info-column">
+          <div class="info-content">
+            <p class="info-text">
+              Closed<br>
+              consecutively.<br>
+              <br>
+              Strong Water<br>
+              Pressure
+            </p>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a53c8ffb83025f1a4a795514d8eb58121588b73dd410f7d578722770d479266?placeholderIfAbsent=true&apiKey=dde2e0dc494a44efbb7d6e5bedafc7e4" alt="Water pressure information graphic" class="info-image">
+          </div>
+        </div>
+      </div>
+    </section>

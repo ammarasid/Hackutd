@@ -1,0 +1,181 @@
+<style>
+    .water-usage-tap-three {
+      background: var(--Radial, radial-gradient(50% 50% at 50% 50%, #a6fffc 0%, #fff 100%));
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 60px 42px;
+    }
+    
+    .section-title {
+      color: #000;
+      text-align: center;
+      align-self: center;
+      font: 400 48px Inter, sans-serif;
+      border: 1px solid #000;
+      margin-bottom: 50px;
+    }
+    
+    .status-container {
+      display: flex;
+      align-items: flex-start;
+      color: #000;
+      text-align: center;
+      font: 400 48px Inter, sans-serif;
+      justify-content: space-between;
+      width: 100%;
+    }
+    
+    .status-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 33.33%;
+    }
+    
+    .status-item,
+    .pressure-item,
+    .info-item {
+      background-color: #d9d9d9;
+      padding: 15px 23px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    
+    .details-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 50px;
+    }
+    
+    .status-content,
+    .pressure-content,
+    .info-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #000;
+      text-align: center;
+      font: 400 30px Inter, sans-serif;
+      width: 33.33%;
+    }
+    
+    .status-indicator {
+      background-color: #2ad63e;
+      border-radius: 50%;
+      width: 117px;
+      height: 117px;
+      margin-bottom: 20px;
+    }
+    
+    .pressure-bars {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+      margin-top: 20px;
+    }
+    
+    .pressure-bar {
+      width: 100%;
+      height: 38px;
+      margin-top: 10px;
+    }
+    
+    .pressure-bar-gray {
+      background-color: #d9d9d9;
+    }
+    
+    .pressure-bar-yellow {
+      background-color: #ffe32a;
+    }
+    
+    .pressure-bar-orange {
+      background-color: #ee7546;
+    }
+    
+    .pressure-bar-red {
+      background-color: #ef3535;
+    }
+    
+    .info-image {
+      width: 267px;
+      max-width: 100%;
+      height: auto;
+      margin-top: 20px;
+    }
+    
+    @media (max-width: 991px) {
+      .water-usage-tap-three {
+        padding: 30px 20px;
+      }
+    
+      .section-title {
+        font-size: 36px;
+      }
+    
+      .status-container,
+      .details-container {
+        flex-direction: column;
+      }
+    
+      .status-column,
+      .status-content,
+      .pressure-content,
+      .info-content {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    
+      .status-item,
+      .pressure-item,
+      .info-item {
+        font-size: 36px;
+      }
+    
+      .pressure-bars {
+        width: 80%;
+      }
+    }
+    </style>
+    
+    <section class="water-usage-tap-three">
+      <h2 class="section-title">Check Water Usage of Tap Three</h2>
+      <div class="status-container">
+        <div class="status-column">
+          <div class="status-item">Activity Status</div>
+        </div>
+        <div class="status-column">
+          <div class="pressure-item">Pressure Sensor</div>
+        </div>
+        <div class="status-column">
+          <div class="info-item">Information</div>
+        </div>
+      </div>
+      <div class="details-container">
+        <div class="status-content">
+          <div class="status-indicator" aria-hidden="true"></div>
+          <p>Tap: Opened</p>
+        </div>
+        <div class="pressure-content">
+          <p>1 Bar</p>
+          <div class="pressure-bars">
+            <div class="pressure-bar pressure-bar-gray" aria-hidden="true"></div>
+            <div class="pressure-bar pressure-bar-yellow" aria-hidden="true"></div>
+            <div class="pressure-bar pressure-bar-orange" aria-hidden="true"></div>
+            <div class="pressure-bar pressure-bar-red" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="info-content">
+          <p>
+            Opened for 30<br>
+            consecutive minutes.<br>
+            <br>
+            Moderate Water<br>
+            Pressure
+          </p>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/d091b5f624b0b456cbb47353330024d49ce0b3bcb627ca8ab7873e56b6a866f6?placeholderIfAbsent=true&apiKey=dde2e0dc494a44efbb7d6e5bedafc7e4" alt="Water usage information graphic" class="info-image">
+        </div>
+      </div>
+    </section>
